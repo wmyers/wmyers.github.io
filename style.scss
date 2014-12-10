@@ -7,6 +7,7 @@
 
 @import "_reset";
 @import "_variables";
+@import "vendor/google/fonts";
 // Syntax highlighting @import is at the bottom of this file
 
 /**************/
@@ -19,7 +20,7 @@ html {
 
 body {
 	background: $white;
-  font: 18px/1.4 $helvetica;
+  font: 18px/1.4 $base-font;
   color: $darkGray;
 }
 
@@ -31,11 +32,10 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $helveticaNeue;
+  font-family: $heading-font;
   color: $darkerGray;
-  font-weight: bold;
-  
-  line-height: 1.7;
+
+  line-height: 1.6;
   margin: 1em 0 15px;
   padding: 0;
 
@@ -43,23 +43,28 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.4;
   }
 }
-  
-h1 {  
-  font-size: 30px;
+
+h1 {
+  font-size: 28px;
+  font-weight: bold;
   a {
     color: inherit;
   }
 }
 
-h2 {  
+h2 {
   font-size: 24px;
+  font-weight: bold;
+  a {
+    color: inherit;
+  }
 }
 
-h3 {  
-  font-size: 20px;
+h3 {
+  font-size: 22px;
 }
 
-h4 {  
+h4 {
   font-size: 18px;
   color: $gray;
 }
@@ -152,7 +157,7 @@ img {
 .masthead {
   padding: 20px 0;
   border-bottom: 1px solid $lightGray;
-  
+
   @include mobile {
     text-align: center;
   }
@@ -189,17 +194,17 @@ img {
   margin: 0;
   color: $darkGray;
   cursor: pointer;
-  font-family: $helveticaNeue; 
+  font-family: $heading-font;
   font-weight: 300;
-  font-size: 28px;
-  letter-spacing: 1px;
+  font-size: 32px;
 }
 
 .site-description {
   margin: -5px 0 0 0;
   color: $gray;
+  font-family: $heading-font;
   font-size: 16px;
-  
+
   @include mobile {
     margin: 3px 0;
   }
@@ -208,9 +213,9 @@ img {
 nav {
   float: right;
   margin-top: 23px; // @TODO: Vertically middle align
-  font-family: $helveticaNeue; 
+  font-family: $heading-font;
   font-size: 18px;
-  
+
   @include mobile {
     float: none;
     margin-top: 9px;
@@ -223,7 +228,6 @@ nav {
     color: $darkGray;
     text-align: right;
     font-weight: 300;
-    letter-spacing: 1px;
 
     @include mobile {
       margin: 0 10px;
@@ -246,7 +250,7 @@ nav {
   border-bottom: none;
 }
 
-.post { 
+.post {
   blockquote {
     margin: 1.8em .8em;
     border-left: 2px solid $gray;
