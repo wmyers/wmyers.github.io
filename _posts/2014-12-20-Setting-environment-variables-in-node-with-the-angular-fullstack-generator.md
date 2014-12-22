@@ -47,7 +47,6 @@ Firstly `./config/environment` points to the environment node module at `./serve
 
 ```javascript
 // All configurations will extend these options
-// ============================================
 var all = {
   env: process.env.NODE_ENV,
 
@@ -78,7 +77,6 @@ In the `./server/config/environment/index.js` module , once the `all` object is 
 ```javascript
 // Export the config object based on the NODE_ENV
 // Individual overwrites global.
-// ==============================================
 module.exports = _.merge(
   all,
   require('./' + process.env.NODE_ENV + '.js') || {});
