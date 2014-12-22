@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Trying to be MEAN 1
-category: MEAN
+title: Setting environment variables in Node JS with the angular-fullstack generator
+category: Node
 ---
 
 I've been going through the [angular-fullstack](https://github.com/DaftMonk/generator-angular-fullstack) generated files to see how the app starts up and how environment variables are set. Angular-fullstack builds a MEAN stack with ExpressJS for the server and GruntJS as a task runner.
