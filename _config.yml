@@ -45,18 +45,22 @@ url:
 # then add in the baseurl here, like this: "/repository-name"
 baseurl: ""
 
+# The release of Jekyll Now that you're using
+version: v1.0.0
+
+markdown: redcarpet
+markdown_ext:  markdown,mkdown,mkdn,mkd,md
+redcarpet:
+  extensions: ["tables", "autolink", "strikethrough", "space_after_headers", "with_toc_data", "fenced_code_blocks"]
 
 
-
-markdown: kramdown
 highlighter: pygments
 permalink: /:title/
 
-kramdown:
-  input: GFM
-
-# The release of Jekyll Now that you're using
-version: v1.0.0
+# - not using due to issues with code highlighting
+# markdown: kramdown
+# kramdown:
+#   input: GFM
 
 # Set the Sass partials directory, as we're using @imports
 sass:
