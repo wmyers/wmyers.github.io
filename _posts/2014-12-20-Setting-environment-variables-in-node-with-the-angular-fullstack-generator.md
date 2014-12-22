@@ -4,11 +4,11 @@ title: Setting environment variables in Node JS with the angular-fullstack gener
 category: Node
 ---
 
-I've been going through the [angular-fullstack](https://github.com/DaftMonk/generator-angular-fullstack) generated files to understand how the app starts up and how environment variables are set. Angular-fullstack builds a MEAN stack with ExpressJS for the server and GruntJS as a task runner.
+Looking at [angular-fullstack](https://github.com/DaftMonk/generator-angular-fullstack) generated files I am following how the app starts up and how environment variables are set. Angular-fullstack builds a MEAN stack with ExpressJS for the server and GruntJS as a task runner.
 
 Environment variables for a node app are stored in `process.env`. This is a property of the global node `process` EventEmitter, documented [here](http://nodejs.org/api/process.html#process_process_env).
 
-Going through the angular-fullstack generated files I can see environment configuration code occurring in roughly two parts of the app. Firstly in `/server/app.js` and in various files and sub-folders in the `.server/config` folder. Secondly in the `./Gruntfile.js` task configurations.
+Going through the files I can see environment configuration code occurring in roughly two parts of the app. Firstly in `/server/app.js` and in various files and sub-folders in the `.server/config` folder. Secondly in the `./Gruntfile.js` task configurations.
 
 **tl;dr**
 

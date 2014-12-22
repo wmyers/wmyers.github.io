@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Singapore Diary 1
+title: Singapore Diary 2
 category: Singapore
 ---
 

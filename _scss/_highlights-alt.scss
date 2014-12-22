@@ -57,7 +57,8 @@ background-color: #272822; }
 /* Comment.Preproc */
 .highlight .c1 {
 color: #75715e;
-background-color: #272822; }
+background-color: #272822;
+}
 
 /* Comment.Single */
 .highlight .cs {
@@ -370,4 +371,6 @@ color: #f8f8f2;
 line-height: 1; }
 
 .highlight code {
-font-size: .8rem; }
+font-size: .8rem;
+white-space: pre-wrap;
+}

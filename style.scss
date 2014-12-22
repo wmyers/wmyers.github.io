@@ -270,6 +270,15 @@ nav {
   }
 }
 
+.entry p:first-child::first-letter {
+    font-size: 1.8em;
+    font-weight: bold;
+    padding: 0.08em;
+    margin-right:2px;
+    border: 1px solid $lightGray;
+    border-radius: 3px;
+}
+
 .wrapper-footer {
   margin-top: 50px;
   border-top: 1px solid #ddd;
