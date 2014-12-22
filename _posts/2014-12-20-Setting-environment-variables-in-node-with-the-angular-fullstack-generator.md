@@ -173,7 +173,7 @@ grunt.registerTask('test', function(target) {
 
 So in conclusion we can see Grunt (using the grunt-env task) setting different environment variables, specifically `process.env.NODE_ENV`, and also setting any local config environment variables. Then the node/express app uses `process.env.NODE_ENV ` to load in other statically defined environment variables from files in the `.server/config` folder, and mix them into the `./config/environment` module.
 
-This is a flexible if slightly convoluted way of doing things - but it works.
+This is a flexible if slightly complicated way of doing things - but it works.
 
 For an alternative way of defining environment variables (without a localConfig option)
 which uses the [grunt-replace](https://github.com/outaTiME/grunt-replace) plugin, see [this blog post](http://newtriks.com/2013/11/29/environment-specific-configuration-in-angularjs-using-grunt/).
