@@ -12,7 +12,7 @@ Going through the files I can see environment configuration code occurring in ro
 
 **tl;dr**
 
-To summarize: static files in the server config folder define variables for different environments; Grunt tasks provide a mechanism for choosing a specific environment when launching the app. Grunt also provides a way to configure local environment variables, e.g. a `development` environment with local db credentials.
+To summarize: static files in the server config folder define variables for different environments; Grunt tasks provide a mechanism for choosing a specific environment when launching the app. Grunt also provides a way to configure local environment variables, e.g. credentials and secrets for a db running on a server or developer's local machine.
 
 So how does it all tie together? First off I'll go through what I have found in these two parts of the app.
 
@@ -84,9 +84,23 @@ module.exports = _.merge(
 
 **Grunt**
 
-As mentioned earlier, in addition to the files for defining environment variables in `./server/config/environment/` there also needs to be a way to define *local* environment variables (for example to connect to a locally running database on a developer's machine).
+As mentioned earlier, in addition to the files for defining environment variables in `./server/config/environment/` there also needs to be a way to define *local* environment variables (for example to connect to a locally running database on a server or a developer's machine).
 
 This can be done by copying the `./server/config/local.env.sample.js` file, adding your local environment values, and renaming it to `./server/config/local.env`.
+
+This local env file is the place to put secrets (credentials etc) and should not be version controlled. So it should be adde to your .gitignore file and manually added to servers or local dev machines.
+
+```javascript
+// Use local.env.js for environment variables that grunt will set when the server starts locally.
+// Use for your api keys, secrets, etc. This file should not be tracked by git.
+//
+// You will need to set these on the server you deploy to.
+
+module.exports = {
+  DOMAIN:           'http://localhost:9000',
+  SESSION_SECRET:   'demo-secret',
+  ...
+```
 
 In Gruntfile.js, the module automatically looks for any local config at the top of the script, if it doesn't find any localConfig it assigns an empty object to it.
 

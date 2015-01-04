@@ -4,6 +4,8 @@ title: Taxis in Singapore
 category: Singapore
 ---
 
+Here's a summary of a discussion I recently had with a nice taxi driver about his profession.
+
 * Taxi drivers earn on average S$3000 per month after expenses and tax, if they are running the cab with a partner.
 * A older cab (5yrs+) costs $100 per day to hire from the taxi company.
 * The taxi company provides compulsory maintenance every 6 weeks.
@@ -16,3 +18,7 @@ category: Singapore
 * The normal switch-over time from a day shift to a night shift is 5pm-6pm. The cab must be cleaned and re-fuelled before changing shift.
 
 So what would be the most dangerous time to take a cab? Presumably when an overworked single-shift driver is coming to the end of a 15-hour day. But presumably these drivers are tired all the time.
+
+I've certainly taken cabs when the driver is visibly exhausted, and once had to shout out when we veered into the curb. Additionally quite a lot of Singapore taxis have bad drivers (very heavy on the gears and brakes) irrespective if they are tired or not. Some  are also clearly finding the job a strain mentally - though that is probably the same everywhere in the world.
+
+To be fair I take a lot more taxis in Singapore than I have done in other cities, and experience good drivers and bad-but-bearable drivers in roughly equal measure. Only rarely do I get a driver who is really bad. Most drivers are also courteous, and some are great conversationalists. 
