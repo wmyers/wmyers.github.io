@@ -88,7 +88,7 @@ As mentioned earlier, in addition to the files for defining environment variable
 
 This can be done by copying the `./server/config/local.env.sample.js` file, adding your local environment values, and renaming it to `./server/config/local.env`.
 
-This local env file is the place to put secrets (credentials etc) and should not be version controlled. So it should be adde to your .gitignore file and manually added to servers or local dev machines.
+This local env file is the place to put secrets (credentials etc) and should not be version controlled. So it should be added to your .gitignore file and manually added to servers or local dev machines.
 
 ```javascript
 // Use local.env.js for environment variables that grunt will set when the server starts locally.
