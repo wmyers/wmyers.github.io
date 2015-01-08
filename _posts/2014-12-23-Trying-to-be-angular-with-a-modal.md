@@ -6,7 +6,7 @@ category: AngularJS
 
 Angular has been in the news a bit of late. The announcement of Angular 2.0, scheduled for release at the end of 2015, has got many people frothing at the mouth either for or against the proposed changes to the framework.
 
-For the record I'm quite relaxed about it, partly because I've only recently started using Angular, so have less to lose. I'm also a former (and still occasional) Flash Developer so I know what it's like to see a chosen technology die from a thousand cuts. I don't think this will happen to Angular, irrespective of the more performance-based newer frameworks like React/Flux, and also native ES6 web components.
+For the record I'm quite relaxed about it, partly because I've only been using Angular for a few months. I'm also a former (and still occasional) Flash Developer so I know what it's like to see a chosen technology die from a thousand cuts. I don't think this will happen to Angular, irrespective of the more performance-based newer frameworks like React/Flux, and also native ES6 web components.
 
 The recent flame wars have also prompted some good posts on Angular optimisation, and made me google some older ones. Here are two posts I've been reading and re-reading:
 
