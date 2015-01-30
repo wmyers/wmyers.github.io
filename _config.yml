@@ -55,7 +55,7 @@ redcarpet:
 
 
 highlighter: pygments
-permalink: /:title/
+permalink: /:categories/:title
 
 # - not using due to issues with code highlighting
 # markdown: kramdown

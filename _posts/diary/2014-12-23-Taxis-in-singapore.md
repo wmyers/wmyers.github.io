@@ -1,7 +1,9 @@
 ---
 layout: post
 title: Taxis in Singapore
-category: Singapore
+categories:
+- diary
+- singapore
 ---
 
 Here's a summary of a discussion I recently had with a nice taxi driver about his profession.
@@ -21,4 +23,4 @@ So what would be the most dangerous time to take a cab? Presumably when an overw
 
 I've certainly taken cabs when the driver is visibly exhausted, and once had to shout out when we veered into the curb. Additionally quite a lot of Singapore taxis have bad drivers (very heavy on the gears and brakes) irrespective if they are tired or not. Some  are also clearly finding the job a strain mentally - though that is probably the same everywhere in the world.
 
-To be fair I take a lot more taxis in Singapore than I have done in other cities, and experience good drivers and bad-but-bearable drivers in roughly equal measure. Only rarely do I get a driver who is really bad. Most drivers are also courteous, and some are great conversationalists. 
+To be fair I take a lot more taxis in Singapore than I have done in other cities, and experience good drivers and bad-but-bearable drivers in roughly equal measure. Only rarely do I get a driver who is really bad. Most drivers are also courteous, and some are great conversationalists.

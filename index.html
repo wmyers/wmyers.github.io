@@ -4,15 +4,17 @@ layout: default
 
 <div class="posts">
   {% for post in site.posts %}
-    <article class="post">
+    {% if post.categories[0] != 'folio' %}
+      <article class="post">
 
-      <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+        <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
 
-      <div class="entry-excerpt">
-        {{ post.content | truncatewords:30}}
-      </div>
+        <div class="entry-excerpt">
+          {{ post.content | truncatewords:30}}
+        </div>
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
+        <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+      </article>
+    {% endif %}
   {% endfor %}
 </div>

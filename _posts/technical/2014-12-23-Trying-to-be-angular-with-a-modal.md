@@ -1,7 +1,9 @@
 ---
 layout: post
 title: Trying to be more Angular with a modal dialog
-category: AngularJS
+categories:
+- technical
+- angularJS
 ---
 
 Angular has been in the news a bit of late. The announcement of Angular 2.0, scheduled for release at the end of 2015, has got many people frothing at the mouth either for or against the proposed changes to the framework.
