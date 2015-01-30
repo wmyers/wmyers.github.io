@@ -1,5 +1,7 @@
 ---
 layout: default
+title: Folio
+permalink: /folio/
 ---
 
 <div class="posts">
