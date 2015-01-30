@@ -277,10 +277,12 @@ nav {
 
 }
 
-.page {
+.page p:first-child {
+  text-align: center;
   img {
     border-radius: 5px;
   }
+  //naughty
   img[alt=Waffler] {
     width:501px;
   }
