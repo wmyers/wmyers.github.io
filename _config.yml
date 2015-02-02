@@ -63,12 +63,13 @@ permalink: /:categories/:title
 #   input: GFM
 
 # Set the Sass partials directory, as we're using @imports
+# NB Jekyll now supports Sass natively, rather than using jekyll-assets for this before
 sass:
   sass_dir: _scss
   style: :expanded # You might prefer to minify using :compressed
 
 # Use the following plug-ins
-gems:
+# gems:
   - jemoji # Emoji please!
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
 
