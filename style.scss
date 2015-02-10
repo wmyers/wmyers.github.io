@@ -292,7 +292,7 @@ nav {
   }
 }
 
-.entry p:first-child::first-letter {
+.entry > p:first-child::first-letter {
   font-size: 1.8em;
   font-weight: bold;
   padding: 0.08em;
