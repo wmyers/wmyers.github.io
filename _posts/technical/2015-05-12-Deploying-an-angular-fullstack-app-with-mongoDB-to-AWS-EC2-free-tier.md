@@ -81,7 +81,7 @@ For MongoDB setup I mostly followed this [ Colombian University post](https://gi
 
 With the Mongo stuff, the post also concurred with others I had read, and it was essentially a condensed version of fuller instructions in the [official MongoDB docs](http://docs.mongodb.org/ecosystem/platforms/amazon-ec2/). NB because I had read up on EBS volumes in the [AWS setup link](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/get-set-up-for-amazon-ec2.html) I was able to understand the MongoDB documentation better.
 
-The Mongo docs recommend separate pre-allocated EBS volumes for the best MongoDB install. If you are using the free tier then this is not really an option, the IOPS range sin't high enough. The Colombian post just installs the Mongo directories in `/var/lib/mongo/`. But it useful to understand the difference between the 'free tier' approach and a better setup for Mongo when you are eventually scaling up.
+The Mongo docs recommend separate pre-allocated EBS volumes for the best MongoDB install. If you are using the free tier then this is not really an option, the IOPS range isn't high enough. The Colombian post just installs the Mongo directories in `/var/lib/mongo/`. But it useful to understand the difference between the 'free tier' approach and a better setup for Mongo when you are eventually scaling up.
 
 So finally I had the dist files pushed to the server repo and then deployed from there to a `www` folder, and I had MongoDB up and running on the server. What next? Those environment variables again...
 
@@ -132,7 +132,7 @@ I also added the following to a `.gitignore` file in my dist folder git repo, to
 /server/config/environment/production.env
 ```
 
-NB the `.git` folder and `.gitignore` file **do not** get wiped from the `dist` folder each time you run `grunt build` or `grunt serve:dist` - just in case you were wondering.
+NB the `.git` folder and `.gitignore` file *do not* get wiped from the `dist` folder each time you run `grunt build` or `grunt serve:dist` - just in case you were wondering.
 
 To get the `production.env` file onto the server I manually created and copied in the data:
 ```
