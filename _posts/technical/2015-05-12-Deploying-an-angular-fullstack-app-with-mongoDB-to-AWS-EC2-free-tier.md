@@ -149,6 +149,7 @@ AWS setup:
  * [http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/get-set-up-for-amazon-ec2.html](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/get-set-up-for-amazon-ec2.html)
 
 Installing Node, setting up test app:
+
 * [https://thefloppydisk.wordpress.com/2013/04/25/a-node-js-application-on-the-amazon-cloud-part-1-installing-node-on-an-ec2-instance/](https://thefloppydisk.wordpress.com/2013/04/25/a-node-js-application-on-the-amazon-cloud-part-1-installing-node-on-an-ec2-instance/)
 * [http://www.lauradhamilton.com/how-to-set-up-a-nodejs-web-server-on-amazon-ec2](http://www.lauradhamilton.com/how-to-set-up-a-nodejs-web-server-on-amazon-ec2)
 
@@ -169,4 +170,5 @@ Production environment variables
 **Other useful links**
 
 For generally managing multiple processes in a Unix shell:
-[https://www.ibm.com/developerworks/aix/library/au-speakingunix8/](https://www.ibm.com/developerworks/aix/library/au-speakingunix8/)
+
+* [https://www.ibm.com/developerworks/aix/library/au-speakingunix8/](https://www.ibm.com/developerworks/aix/library/au-speakingunix8/)
