@@ -55,7 +55,7 @@ $ sudo yum install openssl-devel
 $ sudo yum install git
 $ git clone git://github.com/joyent/node.git
 $ cd node
-$ git checkout v0.8.1
+$ git checkout v0.12.3 //version of node you want
 $ ./configure
 $ make
 $ sudo make install
