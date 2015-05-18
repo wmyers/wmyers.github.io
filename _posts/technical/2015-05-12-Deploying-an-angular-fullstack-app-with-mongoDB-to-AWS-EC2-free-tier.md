@@ -47,7 +47,7 @@ For a clear and pleasantly concise explanation of the different types of storage
 
 After that I looked at a couple of posts on installing Node on Amazon Linux and setting up and testing a simple Node app on the EC2 instance. I followed [this link](http://www.lauradhamilton.com/how-to-set-up-a-nodejs-web-server-on-amazon-ec2) for general sanity checks and clearer info on port forwarding settings (from 80 to 8080).
 
-I also went through [this post](https://thefloppydisk.wordpress.com/2013/04/25/a-node-js-application-on-the-amazon-cloud-part-1-installing-node-on-an-ec2-instance/). At the time of writing the most preferred way to install Node _and be able to get the version that you want_ is this approach, cloning the node source code and compiling the version you want with `make`.
+I also went through [this post](https://thefloppydisk.wordpress.com/2013/04/25/a-node-js-application-on-the-amazon-cloud-part-1-installing-node-on-an-ec2-instance/). At the time of writing the most preferred way to install Node _and be able to get the version that you want_ is this approach, cloning the node source code and compiling the version you want with `make`. Below I am specifying Node version 0.12.3, which is the latest at the time of writing. 
 
 ```
 $ sudo yum install gcc-c++ make
@@ -55,7 +55,7 @@ $ sudo yum install openssl-devel
 $ sudo yum install git
 $ git clone git://github.com/joyent/node.git
 $ cd node
-$ git checkout v0.12.3 //version of node you want
+$ git checkout v0.12.3
 $ ./configure
 $ make
 $ sudo make install
