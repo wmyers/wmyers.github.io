@@ -35,7 +35,13 @@ Reading through this setup and subsequent links was invaluable. I also learned a
 
 At this early stage I decided to use an EC2 Amazon Linux image as opposed to an Ubuntu Linux machine image, as I've been told that Amazon Linux comes pre-installed with AWS tools. NB Amazon Linux uses the `yum` install command whereas Ubuntu uses `apt-get`.
 
-I should emphasise that there is masses of good official documentation on AWS. You won't read all of it at first, but starting with the [setup](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/get-set-up-for-amazon-ec2.html) and expanding from there is a good way to go.
+I should emphasise that there is masses of good official documentation on AWS. You won't read all of it at first, but starting with the [setup](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/get-set-up-for-amazon-ec2.html) and then proceeding to [getting started](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html) is a good way to go.
+
+In the [getting started](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html) section I followed all the steps including the optional [Add a Volume to Your Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-add-volume-to-instance.html).
+
+I also read about the [Amazon EC2 Root Device Volume ](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/RootDeviceStorage.html) and paid attention to the section on [Changing the Root Device Volume to Persist](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/RootDeviceStorage.html#Using_RootDeviceStorage).
+
+For a clear and pleasantly concise explanation of the different types of storage volumes on AWS, I read [this](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Storage.html).
 
 **Installing Node**
 
@@ -147,6 +153,9 @@ And that was about it. I ran my app simply with `node server/app.js` or `forever
 AWS setup:
 
  * [http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/get-set-up-for-amazon-ec2.html](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/get-set-up-for-amazon-ec2.html)
+ * [https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html)
+ * [https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/RootDeviceStorage.html](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/RootDeviceStorage.html)
+ * [https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Storage.html](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Storage.html)
 
 Installing Node, setting up test app:
 
