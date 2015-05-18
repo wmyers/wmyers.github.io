@@ -29,7 +29,7 @@ I followed all five steps in this AWS setup documentation:
  * create iam user (get this one under your belt early)
  * create keypair (I did this locally with ssh-keygen rather than sending the private key down from aws)
  * create vpc (I just went with the default vpc but read up on them a bit in other AWS docs)
- * create a security group (initially I just went with the default which just exposes the ssh port 22, but I read further and then created an additional group for opening port 80)
+ * create a security group (I followed the instructions to create a group with least privilege. I used CIDR notation to define ssh access from my isp static ip only. I also added a rule to allow all ICMP, for pinging. I subsequently applied this security group to my EC2 instance when creating and launching.)
 
 Reading through this setup and subsequent links was invaluable. I also learned about IOPS (input/output per second) tokens and how they build up for bursting above the baseline rate, depending on how big your EBS volume is. The free tier only goes up to 30GiB and is a General Purpose volume, hence it cannot accumulate many tokens (and therefore cannot really handle heavy traffic at high speed) - cos it's free.
 
@@ -47,7 +47,7 @@ For a clear and pleasantly concise explanation of the different types of storage
 
 After that I looked at a couple of posts on installing Node on Amazon Linux and setting up and testing a simple Node app on the EC2 instance. I followed [this link](http://www.lauradhamilton.com/how-to-set-up-a-nodejs-web-server-on-amazon-ec2) for general sanity checks and clearer info on port forwarding settings (from 80 to 8080).
 
-I also went through [this post](https://thefloppydisk.wordpress.com/2013/04/25/a-node-js-application-on-the-amazon-cloud-part-1-installing-node-on-an-ec2-instance/). At the time of writing the most preferred way to install Node _and be able to get the version that you want_ is this approach, cloning the node source code and compiling the version you want with `make`. Below I am specifying Node version 0.12.3, which is the latest at the time of writing. 
+I also went through [this post](https://thefloppydisk.wordpress.com/2013/04/25/a-node-js-application-on-the-amazon-cloud-part-1-installing-node-on-an-ec2-instance/). At the time of writing the most preferred way to install Node _and be able to get the version that you want_ is this approach, cloning the node source code and compiling the version you want with `make`. Below I am specifying Node version 0.12.3, which is the latest at the time of writing.
 
 ```
 $ sudo yum install gcc-c++ make
