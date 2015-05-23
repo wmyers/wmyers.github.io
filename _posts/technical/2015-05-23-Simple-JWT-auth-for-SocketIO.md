@@ -8,14 +8,15 @@ categories:
 
 This post is a follow-up to my somewhat rambling earlier post [here](/technical/nodejs/Understanding-JWT-authentication-with-SocketIO). I would still say it's worth reading the earlier post to get an idea of some of the complexities and uncertainties around sockets and authentication, but I do go on a  bit. For some actual code please read on.
 
-My socket authentication technique developed from the [angular-fullstack generator](https://github.com/DaftMonk/generator-angular-fullstack) implementation. However I removed the server-side dependency for the [Auth0.com socketio-jwt module] (https://github.com/auth0/socketio-jwt).
+My socket authentication technique developed from the [angular-fullstack generator](https://github.com/DaftMonk/generator-angular-fullstack) implementation. However I removed the server-side dependency for the Auth0.com [socketio-jwt] (https://github.com/auth0/socketio-jwt) module.
 
-This module and other blog posts on the [Auth0.com site](https://auth0.com/) provided me with a lot of useful info and guidance, but I ultimately preferred not to use their module for the following reasons:
+This module and other blog posts on the [Auth0.com site](https://auth0.com/) provided me with a lot of useful info and guidance, but I ultimately preferred not to use their socketio module for the following reasons:
 
  * it abstracts away too much of what is going on so I don't have fine-grained control of the process
 
  * along with the angular-fullstack generated server code, it seems to favour the technique of passing a JWT token in the query string when the client socket connects to the server for the first time. This is arguably more insecure than passing the token in the body of a socket message
 
+However i am still using Auth0's [jsonwebtoken](https://github.com/auth0/node-jsonwebtoken) node module for authenticating the actual JWT token.
 
 It is not possible to send data in the body of the `connection` event for a socket. So to authenticate with a token in the socket body requires two round trips at the beginning. This approach means that the socket client connects with `io.connect()` and then is temporarily disabled from receiving messages on the server side until the client sends a second `authenticate`  message to the server with a JWT token in the body. Once the token is authenticated the socket is re-enabled and can be used in the normal way.
 
