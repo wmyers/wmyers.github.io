@@ -8,6 +8,8 @@ categories:
 
 I've been building a chat application in AngularJS with SocketIO, which is a well trodden path. However the going can get a little rough when it comes to authentication of the socket.
 
+*EDIT (23/05/2015). The following post discusses some of the complexities around authentication with SocketIO. For a newer post which shows an implementation with code, look [here](/technical/nodejs/Simple-JWT-auth-for-SocketIO/).*
+
 I happened across the following blog posts by a guy who seems to know about JSON Web Token authentication. These are recommended reading, particularly the first post before the second:
 
 [https://auth0.com/blog/2014/01/07/angularjs-authentication-with-cookies-vs-token/](https://auth0.com/blog/2014/01/07/angularjs-authentication-with-cookies-vs-token/)

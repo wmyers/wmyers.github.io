@@ -118,7 +118,7 @@ This approach works similarly in the angular-fullstack development environment u
 
 I added the following code to `app.js` to only use `dotenv` in production:
 
-```
+```javascript
 var express = require('express');
 var mongoose = require('mongoose');
 var config = require('./config/environment');
