@@ -18,6 +18,8 @@ To summarize: static files in the server config folder define variables for diff
 
 So how does it all tie together? First off I'll go through what I have found in these two parts of the app.
 
+*EDIT (25/05/2015). This post is useful for environment variables in development, however angular-fullstack becomes rather complicated when setting enviroment variables for production, especially if you don't want to run Grunt on your remote server but just deploy your `dist` folder. For a solution to angular-fullstack production deployment and environment variables, please read the relevant sections of [this post](/technical/nodejs/angularjs/mongodb/Deploying-an-angular-fullstack-app-with-mongoDB-to-AWS-EC2-free-tier/)*
+
 **Server Config Folder and Files**
 
 When a node app launches, the default start script for the application is defined in the `scripts` tag in package.json. This calls `node server/app.js`.
