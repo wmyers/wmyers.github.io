@@ -54,6 +54,7 @@ js/
 -------- AuthenticatedComponent.jsx
 -------- Home.jsx
 -------- Login.jsx
+-------- Private.jsx
 -------- Signup.jsx
 ---- constants/
 -------- AppConstants.js
@@ -88,6 +89,7 @@ This has a `DefaultRoute` defined. So if going to the root path '/', the router 
   <DefaultRoute handler={Home}/>
   <Route name="login" path="/login" handler={Login}/>
   <Route name="signup" path="/signup" handler={Signup}/>
+  <Route name="private" path="/private" handler={Private}/>
 </Route>
 ```
 
