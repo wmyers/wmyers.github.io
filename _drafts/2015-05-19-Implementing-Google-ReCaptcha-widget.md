@@ -27,9 +27,9 @@ and I added the following snippet to my form just before the submit button:
 <div class="g-recaptcha" data-sitekey="SomeGeneratedDataSiteKeyForAPublicDomain"></div>
 ```
 
-With most web apps it's always nice to see them working on localhost before sending them off to boarding school in the cloud. This was no exception, but turned out to be a bit fiddly.
+With web apps it's always nice to see them working on localhost before sending them off to boarding school in the cloud. This was no exception, but turned out to be a bit fiddly.
 
-In the [getting started](https://developers.google.com/recaptcha/docs/start) section Google states the widget will work in localhost regardless of the domain-linked `data-sitekey` parameter. I did not find this to be the case, I got the following message instead: "ERROR: Invalid domain for site key".
+In the [getting started](https://developers.google.com/recaptcha/docs/start) section Google states the widget will work in localhost regardless of the domain-linked `data-sitekey` parameter. However I did not find this to be the case, rather I got the following message: "ERROR: Invalid domain for site key".
 
 <img src='{{ site.baseurl }}/images/posts/recaptcha-error.png' alt='Google reCaptcha Error' width='308'></img>
 
@@ -48,5 +48,7 @@ So now I have a slightly hacky way of get reCaptcha to work in localhost, whereb
 The final caveat is that when in development mode (with the localhost reCaptcha) and nodemon restarts the app (if you are using it), it is sometimes necessary to close the browser tab and reopen another one, otherwise the reCaptcha widget disappears and won't be enticed to reappear with just a page refresh. This happened in Google Chrome 41.0.2272.104 (64-bit).
 
 **Getting the recaptcha user's response**
+
+Moving on, as I only had one reCaptcah widget, set automatically rather than explicitly, I used the following technique to capture the user's response to the reCaptcha challenge on the client.
 
 **Verifying the user's response on your server**
