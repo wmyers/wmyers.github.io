@@ -169,6 +169,16 @@ There is a problem where a router `willTransitionTo` hook for a `AuthenticatedCo
 
 To fix this `App.jsx` notifies `AppStore` it is ready in `componentDidMount`. Then I have a promise-returning function in `AppStore` to tell an `AuthenticatedComponent` when the app is fully mounted, so it can proceed with an auto-login attempt.
 
+**Possible questions**
+
+*Why am I putting the `LoginStore` listener in App.jsx rather than AuthenticatedComponent.jsx?*
+
+I'm doing this because I  want there to be only one authentication routing handler (think [Highlander](https://www.youtube.com/watch?v=sqcLjcSloXs)) in the application. If each instance of AuthenticatedComponent was also listening for `LoginStore` changes then I would not be able to limit how many times `AppStore.nextTransitionPath` is accessed. Also App.jsx seems like a natural place to put routing logic, especially with the notion of reacter-router code only being in the React components layer, and not used by the rest of the Flux architecture. Additionally, react-router philosophy is to 'show the structure of the App in one place', so putting router handlers only in the root component seems to go along with this.
+
+*Why set the `LoginStore` change listener in `componentDidMount`, and have all this `AppStore` mount checking stuff?*
+
+`componentDidMount` is only called when rendering on the client, whereas `componentWillMount` is also called on the server when using `renderToString()`. Additionally both `componentWillMount` and `componentDidMount` are called after `willTransitionTo`, so there still needs to be a way of checking that everything is mounted.
+
 
 **Conclusion**
 
