@@ -11,7 +11,7 @@ Using [react-router](https://github.com/rackt/react-router) it is not immediatel
 
 **tl;dr**
 
-My proposed solution is to keep routing code defined *only* in React components, and keep it out of Flux actions, dispatchers and stores. Also to define an `AppStore` that stores the lifecycle of your root-level React controller-component. The react-router can query the `AppStore` when transitioning, particularly when authentication is required to view a certain page.
+My proposed solution is to *only* reference the react-router directly in React components, i.e. not reference the router in Flux actions, dispatchers and stores - so there is only a dependency between the router and the React component layer. I will also define a `RouterStore` that stores the next router `transitionPath` string when a user attempts to go to a page which requires authentication and they are not logged in.
 
 You can check out the source code [here](https://github.com/wmyers/react-flux-authentication-routing).
 
@@ -47,8 +47,8 @@ There are a few proposed techniques already out there, but not many for authenti
 ```
 js/
 ---- actions/
--------- AppActionCreators.js
 -------- LoginActionCreators.js
+-------- RouterActionCreators.js
 ---- components/
 -------- App.jsx
 -------- AuthenticatedComponent.jsx
@@ -64,9 +64,9 @@ js/
 ---- services/
 -------- AuthService.js
 ---- stores/
--------- AppStore.js
 -------- BaseStore.js
 -------- LoginStore.js
+-------- RouterStore.js
 ---- index.jsx
 ---- router.js
 ---- routes.jsx
@@ -93,29 +93,32 @@ This has a `DefaultRoute` defined. So if going to the root path '/', the router 
 </Route>
 ```
 
-**components/App.jsx**
+**stores/LoginStore.jsx**
 
-This is the root-level React controller-component, consequently its `componentDidMount` hook will fire last (after its child components). For a discussion on this hook and how its firing order differs to `componentWillMount` see [here](https://github.com/facebook/react/issues/2763).
+This store deals with all authentication actions. It is updated asynchronously when logging in or signing up via the `AuthService`, which is triggered by a dispatch from `LoginActionCreators`.
 
-Inside `componentDidMount` I have the following code which dispatches an action to update the `AppStore` that the root component is fully mounted:
+`LoginStore` *attempts to auto-login in its constructor*. So when the user refreshes the app in the browser, any locally stored token will be retrieved. NB in this demo I am not checking if a locally stored JWT token has expired, only if it exists.
 
 ```javascript
-componentDidMount() {
-  ...
-
-  //notify the AppStore that the application has fully mounted
-  AppActionCreators.notifyAppMounted();
+_autoLogin () {
+  let jwt = localStorage.getItem("my_jwt");
+  if (jwt) {
+    this._jwt = jwt;
+    this._user = jwt_decode(this._jwt);
+  }
 }
 ```
 
-In this component I have the only listener function for any `LoginStore` updates. I only want there to be one listener function for responding to `LoginStore` updates.
+**components/App.jsx**
+
+In this component I have the only listener function for any `LoginStore` updates. I only want there to be one listener function for responding to `LoginStore` updates. In this function a `transitionPath` value is retrieved from the `RouterStore`. This value is set whenever a user attempts to go to a page which requires authentication, but they are not logged in. By default `RouterStore.nextTransitionPath` is set to the root path ('/').
 
 ```javascript
 _onLoginChange() {
   ...
 
   //get any nextTransitionPath - NB it can only be got once then it self-nullifies
-  let transitionPath = AppStore.nextTransitionPath || '/';
+  let transitionPath = RouterStore.nextTransitionPath || '/';
 
   if(userLoggedInState.userLoggedIn){
     router.transitionTo(transitionPath);
@@ -124,6 +127,8 @@ _onLoginChange() {
   }
 }
 ```
+
+The `_onLoginChange` listener is set up in the `componentDidMount` hook of the React component lifecycle. This hook only fires when React components are rendered on the client side, and only after child components have mounted.
 
 This component renders a top nav bar with a mutable logged-in/out state. It does not require authentication but it will auto-redirect to its `DefaultRoute` which *does* require authentication (read on for more info).
 
@@ -138,62 +143,40 @@ In this application the `Home` component page is wrapped in `AuthenticatedCompon
 ```javascript
 static willTransitionTo(transition) {
   if (!LoginStore.isLoggedIn()) {
+
     let transitionPath = transition.path;
 
-    //store next path in AppStore for redirecting after authentication
-    AppActionCreators.storeRouterTransitionPath(transitionPath);
+    //store next path in RouterStore for redirecting after authentication
+    //as opposed to storing in the router itself with:
+    // transition.redirect('/login', {}, {'nextPath' : transition.path});
+    RouterActionCreators.storeRouterTransitionPath(transitionPath);
 
-    //wait until the app controller component is mounted before
-    //attempting to auto-login
-    let autoLogin = () => LoginActionCreators.autoLoginUser();
-
-    if(AppStore.isMounted()){
-      autoLogin();
-    }else{
-      AppStore.isMountedAsPromise()
-      .then(autoLogin);
-    }
+    //go to login page
+    transition.redirect('/login');
   }
 }
 ```
 
-So if a user *is not* logged in, I am doing a few things here. Firstly I'm storing the transition path (e.g. '/private') in the `AppStore`. I'm storing it so that it can only be retrieved once, so that old paths don't persist in the `AppStore`.
+So if a user *is not* logged in, firstly I'm storing the transition path (e.g. '/private') in the `RouterStore`. I'm storing it so that it can only be retrieved once, so that old paths don't persist in the `RouterStore`. Note that although I could store the next `transitionPath` in the router itself (using an optional third parameter in a `transition.redirect()` call), I am choosing not to do so. Instead I am storing it in a Flux store.
 
-Next, rather than redirecting to the Login page, I'm attempting to auto-login. This is because the `DefaultRoute` requires authentication, but also if a user is deep-linking into the app straight to an authenticated page.
+Then I am re-directing to the login page.
 
-The auto-login process occurs in the `LoginStore`, where any locally stored jwt token can be retrieved and checked. NB in this example I'm not checking if a stored token has expired, only if it exists.
-
-Once the auto-login completes (with either success or failure), the `LoginStore` emits a change which will be picked up by the `_onLoginChange` handler in `App.jsx`.
-
-There is a problem where a router `willTransitionTo` hook for a `AuthenticatedComponent` can fire *before* the `App.jsx` component is mounted and ready to receive `LoginStore` changes. This happens I think because react-router follows a component lifecycle at the `componentWillMount` stage rather than the `componentDidMount` stage.
-
-To fix this `App.jsx` notifies `AppStore` it is ready in `componentDidMount`. Then I have a promise-returning function in `AppStore` to tell an `AuthenticatedComponent` when the app is fully mounted, so it can proceed with an auto-login attempt.
-
-**Possible questions**
-
-*Why am I putting the `LoginStore` listener in App.jsx rather than AuthenticatedComponent.jsx?*
-
-I'm doing this because I  want there to be only one authentication routing handler (think [Highlander](https://www.youtube.com/watch?v=sqcLjcSloXs)) in the application. If each instance of AuthenticatedComponent was also listening for `LoginStore` changes then I would not be able to limit how many times `AppStore.nextTransitionPath` is accessed. Also App.jsx seems like a natural place to put routing logic, especially with the notion of reacter-router code only being in the React components layer, and not used by the rest of the Flux architecture. Additionally, react-router philosophy is to 'show the structure of the App in one place', so putting router handlers only in the root component seems to go along with this.
-
-*Why set the `LoginStore` change listener in `componentDidMount`, and have all this `AppStore` mount checking stuff?*
-
-`componentDidMount` is only called when rendering on the client, whereas `componentWillMount` is also called on the server when using `renderToString()`. Additionally both `componentWillMount` and `componentDidMount` are called after `willTransitionTo`, so there still needs to be a way of checking that everything is mounted.
-
+One other caveat is that a `willTransitionTo` hook will get called for the first time *before* a `componentDidMount` or `componentWillMount` hook. Something to be aware of.
 
 **Conclusion**
 
-So the default use-case works like this:
+So the default (not logged-in) use-case works like this:
 
-[User goes to root level path '/'] =>
+[Application launches and `LoginStore` attempts to auto-login, but fails because there is no token] =>
 
-[router redirects to authenticated `Home` page] =>
+[Application routes to root level path '/'] =>
 
-[`willTransitionTo` hook in `Home` stores transition path in `AppStore`] =>
+[`router` redirects to authenticated Home.jsx page] =>
 
-[`willTransitionTo` hook in `Home` waits until the `App.jsx` is mounted and triggers auto-login] =>
+[`willTransitionTo` hook in Home.jsx stores transition path in `LoginStore` and then redirects to Login.jsx page] =>
 
-[`LoginStore` auto login and then emits CHANGE]  =>
+[User logs in and Login.jsx triggers an action in `LoginActionHandlers`] =>
 
-[`_onLoginChange` in `App.jsx` tells router to transition to stored path (or '/')]
+[`LoginStore` updates and then emits CHANGE]  =>
 
-The same process exists for `Login` and `Signup`.
+[`_onLoginChange` in App.jsx tells router to transition to stored path (or '/')]
