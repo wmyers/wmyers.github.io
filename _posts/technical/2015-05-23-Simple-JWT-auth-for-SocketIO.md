@@ -115,6 +115,7 @@ angular.module('myApp')
     //they will be triggered each time the socket connects/re-connects (e.g. when logging out and logging in again)
     //----------------------
     socket.on('authenticated', function () {
+      isAuthenticated = true;
       console.log('socket is jwt authenticated');
     });
     //---------------------
