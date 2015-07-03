@@ -73,7 +73,7 @@ In angular-fullstack, setting environment variables is tightly bound to using Gr
 
 The intention of the generator authors was I think for Grunt and all its dependencies to be installed on the server, and then build to production in situ with `grunt build`. But AWS free tier is space-limited, so deploying the `dist` files is much better.
 
-The Mescalito approach - pushing the `dist` files to a remote git repo on the server which then updates the content of another `www` folder with a post-receive hook - is a much better way. However his instructions are a bit unclear in places, and he's also using Ubuntu rather than Amazon Linux. So I also followed [this post](http://deductiveblog.in/2013/05/19/deploy-to-amazon-ec2-using-git/) which was doing roughly the same thing with a git setup, but explained more clearly. It also has some useful stuff like setting up ssh access to multiple ec2 servers with `.ssh/config` - this in turn makes defining the remote git repo easier.
+The Mescalito approach - pushing the `dist` files to a remote git repo on the server which then updates the content of another `www` folder with a post-receive hook - is a much better way. However his instructions are a bit unclear in places, and he's also using Ubuntu rather than Amazon Linux. So I also followed [this post](https://web.archive.org/web/20150206193701/http://deductiveblog.in/2013/05/19/deploy-to-amazon-ec2-using-git/) which was doing roughly the same thing with a git setup, but explained more clearly. It also has some useful stuff like setting up ssh access to multiple ec2 servers with `.ssh/config` - this in turn makes defining the remote git repo easier.
 
 Once you have followed theses steps for setting a local git repo in your `dist` folder (and cd'd into it), with a remote pointing to your repo folder on ec2 (which then deploys to the `www` folder on ec2 with the hook), then you can simply push your dist updates from your local machine directly to ec2 with the following command (assuming you have named your remote `production`):
 
@@ -164,7 +164,7 @@ Installing Node, setting up test app:
 
 Deployment pipeline with Git:
 
-* [http://deductiveblog.in/2013/05/19/deploy-to-amazon-ec2-using-git/](http://deductiveblog.in/2013/05/19/deploy-to-amazon-ec2-using-git/)
+* [http://deductiveblog.in/2013/05/19/deploy-to-amazon-ec2-using-git/](https://web.archive.org/web/20150206193701/http://deductiveblog.in/2013/05/19/deploy-to-amazon-ec2-using-git/) (on the [Wayback Machine](https://archive.org/web/))
 * [https://github.com/DaftMonk/generator-angular-fullstack/issues/501#issuecomment-57489119](https://github.com/DaftMonk/generator-angular-fullstack/issues/501#issuecomment-57489119)
 
 Mongo DB on EC2
