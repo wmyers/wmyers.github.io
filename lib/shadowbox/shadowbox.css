@@ -77,7 +77,7 @@
   display: inline-block;
 }
 #sb-body, #sb-loading {
-  background-color: #060606; /* should match loading image background color */
+   background-color: #060606; /* should match loading image background color */
 }
 
 /* title & info */
