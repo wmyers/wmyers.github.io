@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<WorldQuestions bgColor="0xF19001">
+	<WorldQuestion>
+		<Question width="289" height="50">What are they?</Question>
+		<QuestionLabelOffset>-263,-147</QuestionLabelOffset>
+		<QuestionGraphics>
+			<QG off="-20,-289">Q01_tray</QG>
+		</QuestionGraphics>
+		<Answers>
+			<a1>Insect specimens from the entomology collection – these are bumblebees</a1>
+			<a2>They belong to the scientific genus %3Cfont%20face%3D%27nhmIngItaReg%27%3EBombus%3C%2Fi%3E</a2>
+			<a3>They are five different species, all found in the UK</a3>
+			<a31>Common carder bee%3Cbr%2F%3E%3Cfont%20face%3D%27nhmIngItaReg%27%3EBombus pascuorum%3C%2Fi%3E</a31>
+			<a32>Moss carder bee%3Cbr%2F%3E%3Cfont%20face%3D%27nhmIngItaReg%27%3EBombus muscorum%3C%2Fi%3E</a32>
+			<a33>Heath bumblebee%3Cbr%2F%3E%3Cfont%20face%3D%27nhmIngItaReg%27%3EBombus jonellus%3C%2Fi%3E</a33>
+			<a34>Bilberry bumblebee%3Cbr%2F%3E%3Cfont%20face%3D%27nhmIngItaReg%27%3EBombus monticola%3C%2Fi%3E</a34>
+			<a35>Red-shanked carder bee%3Cbr%2F%3E%3Cfont%20face%3D%27nhmIngItaReg%27%3EBombus ruderarius%3C%2Fi%3E</a35>
+		</Answers>
+		<AnswerPauses>0,0,0</AnswerPauses>
+		<AnswerAnimPos>683,384</AnswerAnimPos>
+		<AnswerLabelPos>-683,-174</AnswerLabelPos>
+	</WorldQuestion>
+	<WorldQuestion>
+		<Question width="450" height="50">Why are they kept on pins?</Question>
+		<QuestionLabelOffset>-215,-61</QuestionLabelOffset>
+		<QuestionGraphics>
+			<QG off="-215,-265">Q02_pin</QG>
+		</QuestionGraphics>
+		<Answers>
+			<a1>Keeping bumblebee specimens on pins helps show off all their features –%3Cbr%2F%3Ewe keep most insects in our collection like this</a1>
+			<a2>The label on each pin records what the specimen is, where and when it was collected, and by whom</a2>
+		</Answers>
+		<AnswerPauses>0,0</AnswerPauses>
+		<AnswerAnimPos>-0.3,-0.7</AnswerAnimPos>
+		<AnswerLabelPos>916.3,390.3</AnswerLabelPos>
+	</WorldQuestion>
+	<WorldQuestion>
+		<Question width="547" height="50">Where do they fit in the tree of life?</Question>
+		<QuestionLabelOffset>-552,-328</QuestionLabelOffset>
+		<QuestionGraphics>
+			<QG off="-552,-281">Q03_tray</QG>
+			<QG off="-166,-278">Q03_wordbee</QG>
+		</QuestionGraphics>
+		<Answers>
+			<a1>These bumblebees are related to honeybees and other bees, in a family called the Apidae</a1>
+			<a2>About 250 species of bumblebee are found all over the world</a2>
+			<a3>Twenty five are found in the UK</a3>
+		</Answers>
+		<AnswerPauses>0,0,0</AnswerPauses>
+		<AnswerAnimPos>-290.1,-170.8</AnswerAnimPos>
+		<AnswerLabelPos>1109.2,352.4</AnswerLabelPos>
+	</WorldQuestion>
+	<WorldQuestion>
+		<Question width="403.9" height="50">Why are they kept here?</Question>
+		<QuestionLabelOffset>-16,113</QuestionLabelOffset>
+		<QuestionGraphics>
+			<QG off="244,163">Q04_wing</QG>
+		</QuestionGraphics>
+		<Answers>
+			<a1>The tiniest detail on these bumblebees, or their labels, could lead to new understandings</a1>
+			<a2>Scientists study specimens to answer many questions about the natural world, like how biodiversity is changing</a2>
+		</Answers>
+		<AnswerPauses>0,0</AnswerPauses>
+		<AnswerAnimPos>0,0</AnswerAnimPos>
+		<AnswerLabelPos>0,587</AnswerLabelPos>
+	</WorldQuestion>
+	<WorldQuestion>
+		<Question width="527" height="50.2">What can they tell us?</Question>
+		<QuestionLabelOffset>45,-270</QuestionLabelOffset>
+		<QuestionGraphics>
+			<QG off="352,-348">Q05_trays</QG>
+		</QuestionGraphics>
+		<Answers>
+			<a1>Compare recent bumblebee distribution data with surveys taken in the 1960s and 1970s and it becomes clear that some UK species are declining</a1>
+			<a2>We think two species have been lost, and others are threatened – scientists are investigating the status of the species like the ones on display</a2>
+			<a3>A major reason is that flowers like red clover, on which the bees feed, are disappearing because of changes in the way farm land is used</a3>
+			<a4>Bumblebees are important natural pollinators of many food plants, so this poses a problem for farmers</a4>
+		</Answers>
+		<AnswerPauses>0,0,0,0</AnswerPauses>
+		<AnswerAnimPos>-0.8,-9.1</AnswerAnimPos>
+		<AnswerLabelPos>307,96.9</AnswerLabelPos>
+	</WorldQuestion>
+</WorldQuestions>

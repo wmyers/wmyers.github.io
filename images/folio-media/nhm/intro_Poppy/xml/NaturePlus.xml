@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<naturePlus>
+<item label="poppies-get-up-close" >
+	<image src="assets/NaturePlus/Station1.Poppies/it-BM000955015_P_rhoeasCROPPED.jpg" />
+	<title>Common poppy specimen</title>
+	<body>View this herbarium sheet in beautiful detail and find out more about poppies in the UK.</body>
+</item>
+<item label="how-science-works-plants-in-our-world" >
+	<image src="assets/NaturePlus/Station1.Poppies/it-fruit-vegCROPPED.jpg" />
+	<title>How Science Works: Plants and us</title>
+	<body>Humans have grown plants for thousands of years but where were they first traded as food and medicine?</body>
+</item>
+</naturePlus>

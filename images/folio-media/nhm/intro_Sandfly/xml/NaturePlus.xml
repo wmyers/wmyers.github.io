@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<naturePlus>
+<item label="sandfly-get-up-close" >
+	<image src="assets/NaturePlus/Station4.Sandflies/it-Image_5753_1sandlfyCROPPED.jpg" />
+	<title>Sandfly specimen</title>
+	<body>View this sandfly in beautiful detail and discover more about our research into the spread of disease.</body>
+</item>
+<item label="how-science-works-medical-research" >
+	<image src="assets/NaturePlus/Station4.Sandflies/it-35304ollieCROPPED.jpg" />
+	<title>How Science Works: Medicine</title>
+	<body>Rising temperatures could affect the life cycle of sandflies. What impact could this have on us?</body>
+</item>
+<item label="science-at-the-museum" >
+	<image src="assets/NaturePlus/Station4.Sandflies/it-35304ollieCROPPED.jpg" />
+	<title>Science at the Museum</title>
+	<body>Discover more about how our collections are used and how they affect our everyday life.</body>
+</item>
+</naturePlus>

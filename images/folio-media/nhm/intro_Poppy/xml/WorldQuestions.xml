@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--Poppy World Questions-->
+<WorldQuestions bgColor="0xBF001F">
+	<WorldQuestion>
+		<Question width="256" height="50">What is this?</Question>
+		<QuestionLabelOffset>-229,-72.5</QuestionLabelOffset>
+		<QuestionGraphics>
+			<QG off="-279,16.5">Q01_herbsheet</QG>
+			<!--<QG off="156,119.5">Q01_flowerheadcopy</QG>-->
+			<QG off="169,146.5">Q01_flowerhead</QG>
+		</QuestionGraphics>
+		<Answers>
+			<a1>A dried plant from the botany collection – the common poppy</a1>
+			<a2>Its scientific name is %3Cfont%20face%3D%27nhmIngItaReg%27%3EPapaver rhoeas%3C%2Ffont%3E</a2>
+			<a3>It is a modern specimen, collected in a field in 2008</a3>
+		</Answers>
+		<AnswerPauses>4,4,5</AnswerPauses>
+		<AnswerAnimPos>683,384</AnswerAnimPos>
+		<AnswerLabelPos>-683,-248</AnswerLabelPos>
+	</WorldQuestion>
+	<WorldQuestion>
+		<Question width="447" height="50">Why is it displayed like this?</Question>
+		<QuestionLabelOffset>34,91.5</QuestionLabelOffset>
+		<QuestionGraphics>
+			<QG off="-98,-209.5">Q02_seedhead</QG>
+			<!--<QG off="-1,113.5">Q02_barcode</QG>-->
+			<QG off="218,146.5">Q02_barcode_1</QG>
+		</QuestionGraphics>
+		<Answers>
+			<a1>Drying and pressing this poppy helps preserve it</a1>
+			<a2>Carefully gluing it to paper shows off most of its identifying features</a2>
+			<a3>The label records what it is, where and when it was collected, and by whom</a3>
+		</Answers>
+		<AnswerPauses>5,6,7</AnswerPauses>
+		<AnswerAnimPos>680,384</AnswerAnimPos>
+		<AnswerLabelPos>236,-53</AnswerLabelPos>
+	</WorldQuestion>
+	<WorldQuestion>
+		<Question width="547" height="50">Where does it fit in the tree of life?</Question>
+		<QuestionLabelOffset>-99,354.5</QuestionLabelOffset>
+		<QuestionGraphics>
+			<!--<QG off="-133,33.5">Q03_labelcopy</QG>-->
+			<QG off="164,156.5">Q03_Layer3</QG>
+			<QG off="-53,126.5">Q03_labelcopy2</QG>
+		</QuestionGraphics>
+		<Answers>
+			<a1>It is related to other poppies, shrubs and even small trees in a family called the Papaveraceae</a1>
+			<a2>Two hundred and ten species of Papaveraceae grow worldwide</a2>
+			<a21>Babington’s poppy%3Cbr%2F%3E%3Cfont%20face%3D%27nhmIngItaReg%27%3EPapaver dubium%3C%2Ffont%3E ssp. %3Cfont%20face%3D%27nhmIngItaReg%27%3Elecoqii%3C%2Ffont%3E</a21>
+			<a22>Long-headed poppy%3Cbr%2F%3E%3Cfont%20face%3D%27nhmIngItaReg%27%3EPapaver dubium%3C%2Ffont%3E</a22>
+			<a23>Prickly poppy%3Cbr%2F%3E%3Cfont%20face%3D%27nhmIngItaReg%27%3EPapaver argemone%3C%2Ffont%3E</a23>
+			<a24>Rough poppy%3Cbr%2F%3E%3Cfont%20face%3D%27nhmIngItaReg%27%3EPapaver hybridum%3C%2Ffont%3E</a24>
+			<a25>Common poppy%3Cbr%2F%3E%3Cfont%20face%3D%27nhmIngItaReg%27%3EPapaver rhoeas%3C%2Ffont%3E</a25>
+			<a3>Five types of poppy (%3Cfont%20face%3D%27nhmIngItaReg%27%3EPapaver%3C%2Ffont%3E) commonly grow in UK fields</a3>
+		</Answers>
+		<AnswerPauses>8,6,0</AnswerPauses>
+		<AnswerAnimPos>683,384</AnswerAnimPos>
+		<AnswerLabelPos>-683,238</AnswerLabelPos>
+	</WorldQuestion>
+	<WorldQuestion>
+		<Question width="338" height="50">Why is it kept here?</Question>
+		<QuestionLabelOffset>274,160.5</QuestionLabelOffset>
+		<QuestionGraphics>
+			<QG off="32,30.5">Q04_herbsheetcopy</QG>
+		</QuestionGraphics>
+		<Answers>
+			<a1>The tiniest detail on a poppy specimen, or%3Cbr%2F%3Eits label, could lead to new understandings</a1>
+			<a2>Scientists study specimens to answer questions about the natural world, like how biodiversity is changing, and why</a2>
+		</Answers>
+		<AnswerPauses>7,8</AnswerPauses>
+		<AnswerAnimPos>683,384</AnswerAnimPos>
+		<AnswerLabelPos>345,133</AnswerLabelPos>
+	</WorldQuestion>
+	<WorldQuestion>
+		<Question width="340" height="50.2">What can it tell us?</Question>
+		<QuestionLabelOffset>-261,-142.5</QuestionLabelOffset>
+		<QuestionGraphics>
+			<!--<QG off="-261,-93.5">Q05_flowerhead</QG>-->
+			<QG off="-243,-95.5">Q05_flowerheadcopy2</QG>
+			<QG off="-77,33.5">Q05_label</QG>
+		</QuestionGraphics>
+		<Answers>
+			<a1>This poppy was collected recently in an%3Cbr%2F%3Eagricultural field – a traditional habitat</a1>
+			<a2>Common poppies were dying out in%3Cbr%2F%3Efields in the mid twentieth century – they%3Cbr%2F%3Ecould not survive the herbicides and%3Cbr%2F%3Efertilisers used in intensive farming</a2>
+			<a3>But some recent changes in farming%3Cbr%2F%3Emethods have allowed common poppies%3Cbr%2F%3Eto return to some fields where they have%3Cbr%2F%3Enot been seen for many years</a3>
+			<a4>Comparing modern specimens with historical specimens and records can help us understand our impact on biodiversity</a4>
+		</Answers>
+		<AnswerPauses>0,0,0,0</AnswerPauses>
+		<AnswerAnimPos>683,384</AnswerAnimPos>
+		<AnswerLabelPos>-122,-324</AnswerLabelPos>
+	</WorldQuestion>
+</WorldQuestions>

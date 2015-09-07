@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config>	
+	<ApplicationLabel></ApplicationLabel>
+	<ApplicationContentXML></ApplicationContentXML>
+	<ApplicationLayoutXML></ApplicationLayoutXML>
+	<NarrativeID>1</NarrativeID>
+	<ExternalNarrativeID>2</ExternalNarrativeID>
+	<NarrativeScreensXML>xml/NarrativeScreens.xml</NarrativeScreensXML>
+	<Debug>false</Debug>
+	<Fullscreen>false</Fullscreen>
+	<NaturePlus>false</NaturePlus>
+	<AllowEmailReg>false</AllowEmailReg>
+	<UseVirtualKeyboard>false</UseVirtualKeyboard>
+	<AttractorTimer>false</AttractorTimer>
+	<AttractorTime>60</AttractorTime>
+	<WorldBezierJourneyTime>2</WorldBezierJourneyTime>
+	<ActorBezierJourneyTime>3</ActorBezierJourneyTime>
+</config>

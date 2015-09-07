@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<WorldQuestions bgColor="0x005567">
+	<WorldQuestion>
+		<Question width="289" height="50">What are they?</Question>
+		<QuestionLabelOffset>-247,-303</QuestionLabelOffset>
+		<QuestionGraphics>
+			<QG off="-318,-278">Q01_sandflytray</QG>
+		</QuestionGraphics>
+		<Answers>
+			<a1>Insect specimens from the entomology collection – these are sandflies</a1>
+			<a2>Their scientific name is %3Ci%3EPhlebotomus sergenti%3C%2Fi%3E</a2>
+			<a3>They are part of the largest collection of sandflies in the world – kept here in the Museum</a3>
+		</Answers>
+		<AnswerPauses>6,4,7</AnswerPauses>
+		<AnswerAnimPos>-2096,-2286</AnswerAnimPos>
+		<AnswerLabelPos>2096,2423</AnswerLabelPos>
+	</WorldQuestion>
+	<WorldQuestion>
+		<Question width="452" height="50">Why are they kept on glass?</Question>
+		<QuestionLabelOffset>475,-98</QuestionLabelOffset>
+		<QuestionGraphics>
+			<QG off="475,-61">Q02_2flies</QG>
+		</QuestionGraphics>
+		<Answers>
+			<a1>Tiny specimens like these sandflies are kept on microscope slides to preserve them</a1>
+			<a2>They are arranged carefully to show off all their features</a2>
+			<a3>The label on each slide records what the specimen is, where and when it was collected and by whom</a3>
+		</Answers>
+		<AnswerPauses>0,0,0</AnswerPauses>
+		<AnswerAnimPos>-2100,-2074</AnswerAnimPos>
+		<AnswerLabelPos>3014.8,2403.95</AnswerLabelPos>
+	</WorldQuestion>
+	<WorldQuestion>
+		<Question width="545" height="50">Where do they fit in the tree of life?</Question>
+		<QuestionLabelOffset>-190,121</QuestionLabelOffset>
+		<QuestionGraphics>
+			<QG off="231,-19">Q03_circlefly</QG>
+		</QuestionGraphics>
+		<Answers>
+			<a1>This species is related to other sandflies in a group called the Phlebotominae</a1>
+			<a2>More than 1,000 species of sandfly are%3Cbr%2F%3Efound worldwide</a2>
+		</Answers>
+		<AnswerPauses>8,9</AnswerPauses>
+		<AnswerAnimPos>-42,-81</AnswerAnimPos>
+		<AnswerLabelPos>41,704</AnswerLabelPos>
+	</WorldQuestion>
+	<WorldQuestion>
+		<Question width="399" height="50">Why are they kept here?</Question>
+		<QuestionLabelOffset>-216,146</QuestionLabelOffset>
+		<QuestionGraphics>
+			<QG off="18,31">Q04_eyefly</QG>
+			<QG off="-101,170">Q04_sergenti</QG>
+		</QuestionGraphics>
+		<Answers>
+			<a1>The tiniest detail on these sandflies, or their labels, could lead to new understandings</a1>
+			<a2>Scientists study specimens like this to answer questions about the natural world, like how disease carriers spread</a2>
+		</Answers>
+		<AnswerPauses>0,0</AnswerPauses>
+		<AnswerAnimPos>-1481,-2303</AnswerAnimPos>
+		<AnswerLabelPos>2449.25,2817.7</AnswerLabelPos>
+	</WorldQuestion>
+	<WorldQuestion>
+		<Question width="369" height="50.2">What can they tell us?</Question>
+		<QuestionLabelOffset>54,-265</QuestionLabelOffset>
+		<QuestionGraphics>
+			<QG off="-116,-334">Q05_label</QG>
+			<QG off="280,-356">Q05_magnifly</QG>
+		</QuestionGraphics>
+		<Answers>
+			<a1>About 20 species of sandfly transmit a parasite that causes leishmaniasis, a disease affecting animals and humans</a1>
+			<a2>Museum scientists are working in%3Cbr%2F%3Esouthern Europe to trap sandflies%3Cbr%2F%3Eand discover which habitats%3Cbr%2F%3Edisease-carrying species prefer</a2>
+			<a3>Some prefer the shelter near houses, while others prefer damp woodland, or higher altitudes</a3>
+			<a4>We can use this information to predict how they might%3Cbr%2F%3Espread across Europe in the future, as our climate and%3Cbr%2F%3Eenvironment change</a4>
+		</Answers>
+		<AnswerPauses>0,0,0,0</AnswerPauses>
+		<AnswerAnimPos>-32,-193.95</AnswerAnimPos>
+		<AnswerLabelPos>590.55,224.35</AnswerLabelPos>
+	</WorldQuestion>
+</WorldQuestions>

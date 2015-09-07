@@ -17,6 +17,16 @@
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
 
+    <!-- Custom JavaScript files set in YAML front matter -->
+    {% for js in page.customjs %}
+      <script async type="text/javascript" src="{{ js }}"></script>
+    {% endfor %}
+    
+    <!-- Custom CSS files set in YAML front matter -->
+    {% for css in page.customcss %}
+      <link rel="stylesheet" type="text/css" href="{{ css }}" />
+    {% endfor %}
+
     <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
   </head>
 

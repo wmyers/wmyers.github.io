@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Narrative>
+	<item name="WorldQuestionsMediator" id="WorldQuestions" icons="nplus" barHeight="68" iconTints="0xFFFFFF" iconLeftPositions="93" iconTop="3"></item>
+	<item name="WorldAnswersMediator" id="WorldAnswer1" icons="true"  navIcons="true" progress="true" progressColor="0x333333" progressBGColor="0xCCCCCC" iconLeftPositions="25,93,200,271" barHeight="68" iconTints="0xFFFFFF,0xFFFFFF,0xFFFFFF,0xFFFFFF" iconTop="3"></item>
+	<item name="WorldAnswersMediator" id="WorldAnswer2" icons="true"  navIcons="true" progress="true" progressColor="0x333333" progressBGColor="0xCCCCCC" iconLeftPositions="25,93,200,271" barHeight="68" iconTints="0xFFFFFF,0xFFFFFF,0xFFFFFF,0xFFFFFF" iconTop="3"></item>
+	<item name="WorldAnswersMediator" id="WorldAnswer3" icons="true"  navIcons="true" progress="true" progressColor="0x333333" progressBGColor="0xCCCCCC" iconLeftPositions="25,93,200,271" barHeight="68" iconTints="0xFFFFFF,0xFFFFFF,0xFFFFFF,0xFFFFFF" iconTop="3"></item>
+	<item name="WorldAnswersMediator" id="WorldAnswer4" icons="true"  navIcons="true" progress="true" progressColor="0x333333" progressBGColor="0xCCCCCC" iconLeftPositions="25,93,200,271" barHeight="68" iconTints="0xFFFFFF,0xFFFFFF,0xFFFFFF,0xFFFFFF" iconTop="3"></item>
+	<item name="WorldAnswersMediator" id="WorldAnswer5" icons="true"  navIcons="true" progress="true" progressColor="0x333333" progressBGColor="0xCCCCCC" iconLeftPositions="25,93,200,271" barHeight="68" iconTints="0xFFFFFF,0xFFFFFF,0xFFFFFF,0xFFFFFF" iconTop="3"></item>
+</Narrative>

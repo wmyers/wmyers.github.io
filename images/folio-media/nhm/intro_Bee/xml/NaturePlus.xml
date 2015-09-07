@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<naturePlus>
+<item label="bees-in-3d" >
+	<image src="assets/NaturePlus/Station3.Bumblebees/it-28322CROPPED.jpg" />
+	<title>Bumblebees in the UK</title>
+	<body>View stunning images of bumblebees online and read about the decline of these important insects in the UK.</body>
+</item>
+<item label="bumblebee-identification" >
+	<image src="assets/NaturePlus/Station3.Bumblebees/it-bee-identification-diagram-16094-1CROPPED.jpg" />
+	<title>Bumblebee identification</title>
+	<body>Which species visit your garden? Use our ID guide or post a question on our bug forum to find out.</body>
+</item>
+<item label="how-science-works-animal-societies" >
+	<image src="assets/NaturePlus/Station3.Bumblebees/it-bombus-pascuorum01CROPPED.jpg" />
+	<title>How Science Works: Bee colonies</title>
+	<body>Bees are very sociable, how do their societies work? Learn how they communicate and about their life cycle.</body>
+</item>
+</naturePlus>
