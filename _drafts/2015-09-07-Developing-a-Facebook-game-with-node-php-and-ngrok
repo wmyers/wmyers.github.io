@@ -1,0 +1,14 @@
+---
+layout: post
+title: Developing a Facebook canvas game with node-php and ngrok
+categories:
+- technical
+- games
+---
+
+
+The Facebook canvas game tutorial provides an example HTML5 game called *Friend Smash* that you can add social features to. The game has a php entrypoint *index.php* and FB recommends using XAMPP to develop the game locally.
+
+**tl:dr**
+
+This post details how to use a local Node Express server and a ngrok tunnel to develop a social FB game locally and preview within the Facebook Canvas Frame chrome.
