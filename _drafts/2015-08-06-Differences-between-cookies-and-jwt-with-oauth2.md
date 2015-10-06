@@ -30,7 +30,7 @@ categories:
  **OAuth2**
 
  - myApp.com registers with (e.g) Google or Facebook
- - Client requests one-time auth token for the app from Google. Google returns this one-time token directly to the client.
+ - Client requests one-time auth token for the app from Google. Google returns this one-time token~ directly to the client.
  - Client logs in to the app server with the one-time token.
  - If using cookies, the server stores the GoogleId in the one-time token with the user data in the database. Also can store other unique data. This can be used for sessionId comparison between app client and app server.
  - Otherwise if using JWT the app server returns a  JWT token upon receiving the one-time OAuth token. The proceeds with JWT technique going forward.
