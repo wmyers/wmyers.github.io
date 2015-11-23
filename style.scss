@@ -259,7 +259,8 @@ nav {
     display: none;
   }
   .entry-excerpt a {
-    display: none;
+    text-decoration: none;
+    color: inherit;
   }
 }
 
