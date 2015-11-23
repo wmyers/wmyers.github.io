@@ -8,25 +8,30 @@ categories:
 
 **Connecting to Azure**
 
-This article explains how to connect to Azure with the Azure CLI:
+This article explains how to gets started, install the Azure CLI, login to your subscription and Azure Active Directory:
+
 https://azure.microsoft.com/en-gb/documentation/articles/xplat-cli-connect/
 
 **Basic Node 'Hello World' on Azure**
 
 This article is a very basic how-to of a Node App on Azure. It does not cover `node_modules` but has useful links at the bottom:
+
 https://azure.microsoft.com/en-gb/documentation/articles/web-sites-nodejs-develop-deploy-mac/
 
 **Custom Node versions on Azure**
 
 This page covers NodeJS versions supported on Azure and how to define your required version in `package.json`:
+
 https://azure.microsoft.com/en-gb/documentation/articles/nodejs-specify-node-version-azure-apps/
 
 It provides a way to specify a custom version of Node using just a `IISNode.yml` config and a deployed `node.exe` version in a `bin` folder. However this did not seem to work without a `deploy.sh` and `.deployment` files - see more explanation below.
 
 This page explains some of the initial limitations with `node_modules` on Azure and the requirement for a custom deployment to get Azure to auto-install your dependencies:
+
 https://azure.microsoft.com/en-gb/documentation/articles/nodejs-use-node-modules-azure-apps/
 
 This blog post eventually provided me with the info  for defining custom deployment:
+
 http://blog.amitapple.com/post/38419111245/azurewebsitecustomdeploymentpart3/#.VhNIuWSqpBc
 
 NB I just ran `azure site deploymentscript --node` and did not change the generated `deploy.sh` file. It then auto-installed my node_modules using npm-shrinkwrap.json (that I had previously generated in my gulp pipeline) as part of the pre-defined steps (in `deploy.sh`).
@@ -60,6 +65,7 @@ This now seems to be under Settings > Application settings. Then `App settings` 
 **Debugging**
 
 This page is massively useful for setting up logging and tail for debugging (need to generate a `IISNode.yml` file if you don't have one yet):
+
 https://azure.microsoft.com/en-us/documentation/articles/web-sites-nodejs-debug/
 
 **FTP access when all else fails**
@@ -69,11 +75,13 @@ To fix a `node_modules` issue for a `npm-shrinkwrap.json` file that had a missin
 **Azure CLI commands for web apps**
 
 This page documents commands to manage your web apps via the Azure CLI:
+
 https://azure.microsoft.com/en-gb/documentation/articles/virtual-machines-command-line-tools/#commands-to-manage-your-web-apps
 
 **MIME types**
 
 I was serving static JSON and getting a 404, this link explained why:
+
 http://blogs.msdn.com/b/africaapps/archive/2013/06/07/how-to-serve-static-json-files-from-a-windows-azure-website.aspx
 
 NB the `web.config` was auto-generated from settings in the azure web console when I deployed for the first time. I edited and overwrote this file via FTP.

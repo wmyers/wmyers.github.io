@@ -250,8 +250,12 @@ nav {
   border-bottom: none;
 }
 
+// hide images in post nav lists
 .posts{
   img {
+    display: none;
+  }
+  .entry-excerpt strong {
     display: none;
   }
 }
