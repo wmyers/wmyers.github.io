@@ -8,7 +8,7 @@ categories:
 
 **Connecting to Azure**
 
-This article explains how to gets started, install the Azure CLI, login to your subscription and Azure Active Directory:
+This article explains how to gets started, install the Azure CLI, and login to your subscription and Azure Active Directory.
 
 https://azure.microsoft.com/en-gb/documentation/articles/xplat-cli-connect/
 
