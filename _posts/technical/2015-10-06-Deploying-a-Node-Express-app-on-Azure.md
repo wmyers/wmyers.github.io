@@ -8,13 +8,13 @@ categories:
 
 **Connecting to Azure**
 
-This article explains how to gets started, install the Azure CLI, and login to your subscription and Azure Active Directory.
+This article link explains how to gets started, install the Azure CLI, and login to your subscription and Azure Active Directory.
 
 https://azure.microsoft.com/en-gb/documentation/articles/xplat-cli-connect/
 
 **Basic Node 'Hello World' on Azure**
 
-This article is a very basic how-to of a Node App on Azure. It does not cover `node_modules` but has useful links at the bottom:
+This article link is a very basic how-to of a Node App on Azure. It does not cover `node_modules` but has useful links at the bottom:
 
 https://azure.microsoft.com/en-gb/documentation/articles/web-sites-nodejs-develop-deploy-mac/
 
