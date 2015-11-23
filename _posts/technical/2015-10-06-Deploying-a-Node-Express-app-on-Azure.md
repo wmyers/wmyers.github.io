@@ -60,7 +60,7 @@ This would indicate that the presence of `IISNode.yml` automatically infers a cu
 
 This now seems to be under Settings > Application settings. Then `App settings` for node environment variables (secrets etc), and `Connection strings` for DB connection strings.
 
-*NB I used MongoDB as a *custom* connection string. This changes the name of the variable in your app, a `CUSTOMCONNSTR_` prefix is added - so `MONGOLAB_URI` becomes `CUSTOMCONNSTR_MONGOLAB_URI`.
+*NB I used MongoDB as a _custom_ connection string. This changes the name of the variable in your app, a `CUSTOMCONNSTR_` prefix is added - so `MONGOLAB_URI` becomes `CUSTOMCONNSTR_MONGOLAB_URI`.*
 
 **Debugging**
 
