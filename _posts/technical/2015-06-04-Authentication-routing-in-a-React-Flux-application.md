@@ -173,7 +173,7 @@ So the default (not logged-in) use-case works like this:
 
 [`router` redirects to authenticated Home.jsx page] =>
 
-[`willTransitionTo` hook in Home.jsx stores transition path in `LoginStore` and then redirects to Login.jsx page] =>
+[`willTransitionTo` hook in Home.jsx stores transition path in `RouterStore` and then redirects to Login.jsx page] =>
 
 [User logs in and Login.jsx triggers an action in `LoginActionHandlers`] =>
 
