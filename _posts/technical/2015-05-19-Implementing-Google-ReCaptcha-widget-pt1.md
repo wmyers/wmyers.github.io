@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Implementing the Google ReCaptcha widget
+title: Implementing the Google ReCaptcha widget Part 1
 categories:
 - technical
 - nodeJS
@@ -46,9 +46,3 @@ In slight desperation I registered a new site for a new key on the manage keys p
 So now I have a slightly hacky way of get reCaptcha to work in localhost, whereby I have to remember to comment/uncomment a line when switching from development to production (I could just code this according to `process.env.NODE_ENV`).
 
 The final caveat is that when in development mode (with the localhost reCaptcha) and nodemon restarts the app (if you are using it), it is sometimes necessary to close the browser tab and reopen another one, otherwise the reCaptcha widget disappears and won't be enticed to reappear with just a page refresh. This happened in Google Chrome 41.0.2272.104 (64-bit).
-
-**Getting the recaptcha user's response**
-
-Moving on, as I only had one reCaptcah widget, set automatically rather than explicitly, I used the following technique to capture the user's response to the reCaptcha challenge on the client.
-
-**Verifying the user's response on your server**
