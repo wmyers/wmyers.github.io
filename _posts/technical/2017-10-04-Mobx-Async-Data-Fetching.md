@@ -80,7 +80,7 @@ So a UI component would change the value of the `observeable` `this.books`, whic
 
 I'm close to wrapping this up, but there are still a couple of question marks. 
 
-Firstly, the above code doesn't specify _when_ the `reaction` is created in the lifecycle of the store. Presumably it could be creacted in the store `constructor` but it might also be created lazily. It should also be noted that invoking the Mobx `reaction` api returns a function which will 'switch off' a created reaction. So that's another variation on reactions to think about.
+Firstly, the above code doesn't specify when the `reaction` is _created_ in the lifecycle of the store. Presumably it could be creacted in the store `constructor` but it might also be created lazily. It should also be noted that invoking the Mobx `reaction` api returns a function which will 'switch off' a created reaction. So that's another variation on reactions to think about.
 
 Secondly although I can perceive a distinction between `autorun` and `reaction` it does seem that their functionality can overlap a bit. There are also other Mobx api's like [`when`](https://mobx.js.org/refguide/when.html) that seem to do similar things too. 
 
