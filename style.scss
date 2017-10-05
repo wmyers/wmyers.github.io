@@ -285,8 +285,12 @@ nav {
 }
 
 //center-align the first image on a page
-.page p:first-child {
+.page .image-wrapper {
   text-align: center;
+  &.with-border {
+    border-radius: 5px;
+    border: 1px solid lightgray
+  }
   img {
     border-radius: 5px;
   }
@@ -330,7 +334,6 @@ footer {
 .folio-links ul li a:hover img { opacity:0.3; filter:alpha(opacity=30); }
 .folio-images ul { margin: 0; padding: 0; list-style-type: none; }
 .folio-images ul li { float: left; margin: 0 20px 20px 0; padding: 0; }
-.folio-images img.main-large { margin: 0 0 10px 0; padding: 0; }
 .folio-line-divider { clear: both; margin: 0; padding: 10px 0; background: url(/images/folio-media/horizontal_line.gif) repeat-x left; height: 1px; width: 740px; }
 
 
